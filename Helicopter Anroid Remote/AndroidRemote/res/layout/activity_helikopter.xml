@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HeliCopter"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".HelikopterActivity"
+    tools:ignore="TextViewEdits,HardcodedText,ExtraText,SpUsage,ContentDescription" >
+
+    <!-- this will prevent the smartphone screen to turn off and the app to go on pause -->
+    <!-- opening another app will kill the connection, though -->
+>
+
+ <WebView
+     android:id="@+id/webView1"
+     android:layout_width="200dp"
+     android:layout_height="300dp"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentRight="true"
+     android:layout_alignWithParentIfMissing="true"
+     android:layout_below="@+id/linearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blue_on" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blue_off" />
+
+        <TextView
+            android:id="@+id/logview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:bufferType="editable"
+            android:text=""
+            android:textSize="14dp" >
+        </TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/stop"
+        android:src="@drawable/back_arrow" />
+
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back_arrow"
+        android:layout_alignTop="@+id/stop"
+        android:layout_toLeftOf="@+id/back_arrow"
+        android:src="@drawable/left_arrow" />
+
+    <ImageView
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="46dp"
+        android:src="@drawable/stop" />
+
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/stop"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/stop"
+        android:src="@drawable/right_arrow" />
+
+    <ImageView
+        android:id="@+id/forward_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stop"
+        android:layout_alignLeft="@+id/stop"
+        android:layout_alignRight="@+id/stop"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:cropToPadding="true"
+        android:src="@drawable/forward_arrow" />
+
+    <ImageView
+        android:id="@+id/btnGazVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/left_arrow"
+        android:src="@drawable/forward_arrow" />
+
+    <ImageView
+        android:id="@+id/btnGazKes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/back_arrow" />
+
+   
+</RelativeLayout>
